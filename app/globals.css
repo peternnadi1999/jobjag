@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue:        #1a3d6e;
+  --blue-light:  #2457a0;
+  --blue-dark:   #0f2548;
+  --green:       #2e7d32;
+  --green-light: #43a047;
+  --green-dark:  #1b5e20;
+  --orange:      #e87722;
+  --orange-light:#f59340;
+  --orange-dark: #c45f0a;
+  --gold:        #f5c518;
+}
+
+* { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+    @apply text-slate-900 bg-white antialiased;
+  }
+}
+
+@layer utilities {
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-up  { animation: fadeUp  0.6s ease-out forwards; }
+.animate-fade-in  { animation: fadeIn  0.5s ease-out forwards; }
